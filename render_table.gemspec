@@ -1,4 +1,3 @@
-
 lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'render_table/version'
@@ -6,11 +5,11 @@ require 'render_table/version'
 Gem::Specification.new do |spec|
   spec.name          = 'render_table'
   spec.version       = RenderTable::VERSION
-  spec.authors       = ['manuel morales']
-  spec.email         = ['morales.jmanuel16@gmail.com']
+  spec.authors       = ['Manuel Morales', 'Mary Kniffin', 'Leo Policastro']
+  spec.email         = ['emau757@gmail.com']
 
   spec.summary       = 'Extensible ruby html table building classes.'
-  spec.homepage      = "https://github.com/mjmorales/render_table"
+  spec.homepage      = 'https://github.com/galacticplastic/render_table'
   spec.license       = 'MIT'
 
   # Specify which files should be added to the gem when it is released.
@@ -22,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'rake', '~> 10.0'
-  spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'bundler', '~> 2.3.4'
+  spec.add_development_dependency 'rake', '~> 13.0.6'
+  spec.add_development_dependency 'rspec', '~> 3.10.0'
 end
