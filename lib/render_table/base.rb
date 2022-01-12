@@ -8,7 +8,7 @@ class RenderTable::Base
   def self.render(args = {})
     table = new(args)
     yield table
-    table.render
+    table.render.html_safe
   end
 
   def initialize(args = {})
