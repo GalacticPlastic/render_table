@@ -4,6 +4,7 @@ class RenderTable::Base
   include ERB::Util
 
   attr_accessor :records, :header, :html, :override, :table_id, :table_class, :options
+  attr_accessor :cell_records, :header, :html, :override, :table_id, :table_class, :timestamps, :options
 
   def self.render(args = {})
     table = new(args)
@@ -18,7 +19,8 @@ class RenderTable::Base
     @table_id    = args[:table_id]    || RenderTable.config.table_id
     @table_class = args[:table_class] || RenderTable.config.table_class
     @html        = args[:html]        || RenderTable.config.html
-    @options     = args[:options]
+    @timestamps ||= true
+    @options = args[:options]
   end
 
   def rows

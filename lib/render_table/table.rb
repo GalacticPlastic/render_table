@@ -7,6 +7,10 @@ class RenderTable::Table < RenderTable::Base
             <% table.header.each do |header| %>
               <th><%= header.to_s %></th>
             <% end %>
+            <% if table.timestamps %>
+              <th>Date Created</th>
+              <th>Last Updated</th>
+            <% end %>
             <% if table.options %>
               <th></th>
             <% end %>
@@ -19,6 +23,10 @@ class RenderTable::Table < RenderTable::Base
               <td id="<%= cell.id %>" class="<%= cell.class %>">
                 <%= cell.value %>
               </td>
+            <% end %>
+            <% if table.timestamps %>
+              <td><%= row.cell_record.created_at.strftime("%b %e, %Y - %l:%M %p %Z") %></td>
+              <td><%= row.cell_record.updated_at.strftime("%b %e, %Y - %l:%M %p %Z") %></td>
             <% end %>
             <% if table.options %>
               <td><%= options_cell(row.record, row.row_index) %></td>
