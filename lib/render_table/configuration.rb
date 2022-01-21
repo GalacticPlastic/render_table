@@ -31,7 +31,7 @@ class RenderTable::Configuration
     end
 
     def default_cell_value
-      '---'
+      'N/A'
     end
   end
 end
