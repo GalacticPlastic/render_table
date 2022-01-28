@@ -12,7 +12,7 @@ class RenderTable::Table < RenderTable::Base
               <th>Last Updated</th>
             <% end %>
             <% if table.options %>
-              <th></th>
+              <th>Options</th>
             <% end %>
           </tr>
         </thead>

@@ -4,6 +4,7 @@ class RenderTable::Base
   include ERB::Util
 
   attr_accessor :records, :header, :html, :override, :table_id, :table_class, :options, :records, :header, :html,
+                :override, :table_id, :table_class, :timestamps, :options
 
   def self.render(args = {})
     table = new(args)
