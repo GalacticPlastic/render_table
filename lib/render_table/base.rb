@@ -3,8 +3,7 @@ require 'erb'
 class RenderTable::Base
   include ERB::Util
 
-  attr_accessor :records, :header, :html, :override, :table_id, :table_class, :options
-  attr_accessor :cell_records, :header, :html, :override, :table_id, :table_class, :timestamps, :options
+  attr_accessor :records, :header, :html, :override, :table_id, :table_class, :options, :records, :header, :html,
 
   def self.render(args = {})
     table = new(args)
@@ -20,7 +19,7 @@ class RenderTable::Base
     @table_class = args[:table_class] || RenderTable.config.table_class
     @html        = args[:html]        || RenderTable.config.html
     @timestamps ||= true
-    @options = args[:options]
+    @options    = args[:options]
   end
 
   def rows

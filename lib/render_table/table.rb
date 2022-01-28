@@ -25,8 +25,8 @@ class RenderTable::Table < RenderTable::Base
               </td>
             <% end %>
             <% if table.timestamps %>
-              <td><%= row.cell_record.created_at.strftime("%b %e, %Y - %l:%M %p %Z") %></td>
-              <td><%= row.cell_record.updated_at.strftime("%b %e, %Y - %l:%M %p %Z") %></td>
+              <td><%= row.record.created_at.strftime("%b %e, %Y - %l:%M %p %Z") %></td>
+              <td><%= row.record.updated_at.strftime("%b %e, %Y - %l:%M %p %Z") %></td>
             <% end %>
             <% if table.options %>
               <td><%= options_cell(row.record, row.row_index) %></td>
