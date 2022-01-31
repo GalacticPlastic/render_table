@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'render_table/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'render_table'
+  spec.name          = 'render_table_v2'
   spec.version       = RenderTable::VERSION
   spec.authors       = ['Manuel Morales', 'Mary Kniffin', 'Leo Policastro']
   spec.email         = ['emau757@gmail.com']
